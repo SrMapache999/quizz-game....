@@ -47,7 +47,7 @@ class QuizGame {
     }
 
     loadQuestion() {
-        const questions = questionsDatabase[this.currentCategory];
+        const questions =window.questionsDatabase[this.currentCategory];
         if (this.currentQuestionIndex >= questions.length) {
             this.endGame();
             return;
@@ -68,7 +68,7 @@ class QuizGame {
     }
 
     checkAnswer(selectedIndex) {
-        const questions = questionsDatabase[this.currentCategory];
+        const questions = window.questionsDatabase[this.currentCategory];
         const currentQ = questions[this.currentQuestionIndex];
         const options = document.querySelectorAll('.option-btn');
         
@@ -187,4 +187,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new QuizGame();
 
 });
+
 
