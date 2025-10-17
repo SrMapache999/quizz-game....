@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>🎯 QUIZ GAME</h1>
+            <p>¿Estás listo para poner a prueba tus conocimientos?</p>
+            <div class="category-select">
+                <h3>Elige una categoría:</h3>
+                <button class="category-btn" data-category="general">🌎 General</button>
+                <button class="category-btn" data-category="tech">💻 Tecnología</button>
+                <button class="category-btn" data-category="science">🔬 Ciencia</button>
+                <button class="category-btn" data-category="entertainment">🎬 Entretenimiento</button>
+            </div>
+            <button id="start-btn" class="btn-primary">¡Comenzar Quiz!</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="score">Puntos: <span id="current-score">0</span></div>
+                <div class="timer">⏱️ <span id="time-left">30</span>s</div>
+                <div class="progress">Pregunta <span id="current-question">1</span>/5</div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">¿Cuál es la capital de Francia?</h2>
+            </div>
+            <div class="options-container">
+                <button class="option-btn" data-index="0">Opción 1</button>
+                <button class="option-btn" data-index="1">Opción 2</button>
+                <button class="option-btn" data-index="2">Opción 3</button>
+                <button class="option-btn" data-index="3">Opción 4</button>
+            </div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h1>🎊 ¡Resultados!</h1>
+            <div class="final-score">
+                <h2>Puntuación Final: <span id="final-score">0</span>/50</h2>
+                <div class="score-message" id="score-message"></div>
+            </div>
+            <div class="leaderboard">
+                <h3>🏆 Mejores Puntuaciones</h3>
+                <ol id="high-scores"></ol>
+            </div>
+            <button id="play-again-btn" class="btn-primary">¡Jugar de Nuevo!</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
