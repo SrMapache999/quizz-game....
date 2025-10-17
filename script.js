@@ -109,7 +109,7 @@ class QuizGame {
             if (this.timeLeft <= 0) {
                 this.timeUp();
             }
-        }, 1000);
+        }, 3000);
     }
 
     resetTimer() {
@@ -187,3 +187,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new QuizGame();
 
 });
+
