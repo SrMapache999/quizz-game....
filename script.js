@@ -101,7 +101,7 @@ class QuizGame {
     }
 
     startTimer() {
-        this.timeLeft = 30;
+        this.timeLeft = 60;
         this.updateTimer();
         this.timer = setInterval(() => {
             this.timeLeft--;
@@ -185,4 +185,5 @@ class QuizGame {
 
 document.addEventListener('DOMContentLoaded', () => {
     new QuizGame();
+
 });
